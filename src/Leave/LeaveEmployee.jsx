@@ -31,7 +31,7 @@ if (!employeeId) {
 }
     const fetchLeaveRequests = async () => {
       try {
-        const response = await axios.get(`https://naveen-module.azurewebsites.net/api/leave/employee/${employeeId}`);
+        const response = await axios.get(`https://dobbybackend.azurewebsites.net/api/leave/employee/${employeeId}`);
         console.log('Employee', employeeId);
         console.log("API Response Data:", response.data); // Log the response
         // Sort leave requests to put the most recent requests on top
@@ -107,7 +107,7 @@ if (!employeeId) {
  
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://naveen-module.azurewebsites.net/api/leave/delete/${id}`);
+      await axios.delete(`https://dobbybackend.azurewebsites.net/api/leave/delete/${id}`);
       setLeaveRequests((prevRequests) =>
         prevRequests.filter((request) => request.id !== id)
       );
@@ -137,7 +137,7 @@ if (!employeeId) {
     const employeeId= localStorage.getItem('employeeId');
     const fetchLeaveRequests = async () => {
       try {
-        const response = await axios.get(`https://naveen-module.azurewebsites.net/api/leave/employee/${employeeId}`);
+        const response = await axios.get(`https://dobbybackend.azurewebsites.net/api/leave/employee/${employeeId}`);
         console.log('Employee', employeeId);
         console.log("API Response Data:", response.data); // Log the response
         // Sort leave requests to put the most recent requests on top
