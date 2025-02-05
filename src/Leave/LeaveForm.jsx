@@ -147,8 +147,8 @@ requiredFields.forEach(field => {
         try {
             console.log(formData);
             const url = isEditing
-                ? `https://naveen-module.azurewebsites.net/api/leave/update/${formData.id}`
-                : `https://naveen-module.azurewebsites.net/api/leave/submit`;
+                ? `https://dobbybackend.azurewebsites.net/api/leave/update/${formData.id}`
+                : `https://dobbybackend.azurewebsites.net/api/leave/submit`;
             let response;
             if (!isEditing) {
                 console.log("POST Request:", formData);
@@ -203,7 +203,7 @@ requiredFields.forEach(field => {
  
     const fetchRemainingLeaveDays = async (employeeId, leaveType) => {
         try {
-            const response = await axios.get('https://naveen-module.azurewebsites.net/api/leave/remaining-leaves', {
+            const response = await axios.get('https://dobbybackend.azurewebsites.net/api/leave/remaining-leaves', {
                 params: { employeeId, leaveType }
             });
             setRemainingLeaveDays(response.data); // Set the remaining leave days in state
