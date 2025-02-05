@@ -62,7 +62,7 @@ const DocumentUploadForm = ({ formData, onNext, onBack, onCancel, onFormDataChan
 
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('https://dobbyfrontend.azurewebsites.net/api/v1/employeeManager/add', formDataToSend, {
+            const response = await axios.post('https://dobbybackend.azurewebsites.net/api/v1/employeeManager/add', formDataToSend, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
 
