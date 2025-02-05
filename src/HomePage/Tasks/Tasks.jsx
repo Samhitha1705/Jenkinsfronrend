@@ -17,7 +17,7 @@ const Tasks=()=>{
             <button className={isTrue ? `${btn2}`: `${btn1}`} onClick={()=>setIsTrue(true)}>Assigned Tasks</button>
             <button className={isTrue ? `${btn1}`: `${btn2}`} onClick={()=>setIsTrue(false)}>Recieved Tasks</button>
         </div>
-        <div>
+        <div></div>
                 {isTrue ? <AssignedTasks/>:<MyTasks/>}
             </div>
         </div>
