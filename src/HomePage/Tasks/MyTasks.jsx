@@ -11,7 +11,7 @@ const MyTasks = props => {
   const [taskType, setTaskType] = useState("allTasks");
 
   // Pagination states
-  const [currentPage, setCurrentPage] = useState(1); // Current page
+  const [currentPage, setCurrentPage] = useState(1); // Current pagee
   const [itemsPerPage] = useState(5); // Items per page (can be adjusted)
   const employeeId=localStorage.getItem("employeeId");
 
