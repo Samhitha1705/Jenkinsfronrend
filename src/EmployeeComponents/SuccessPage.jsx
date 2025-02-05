@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SuccessPage = ({ formData, onCancel }) => {
-    const { credentials } = formData; // Assuming formData has credentials
+    const { credentials } = formData; // Assuming formData has credentialsss
 
 
     return (
