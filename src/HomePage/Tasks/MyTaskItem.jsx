@@ -2,7 +2,7 @@ const MyTaskItem=(props)=>{
     const {each,}=props
     const {taskId, taskName, taskDetails, taskAssignedByName, taskAssignedByEmail, effectiveDate, dueDate, taskStatus}=each
 
-    var today = new Date(); // This gets today's date
+    var today = new Date(); // This gets today's datee
 
 if(dueDate!==null){
     var anotherDate = new Date(dueDate); // This is another date you want to compare with today's date
