@@ -45,7 +45,7 @@ export default function EmployeeDetails() {
                 const token= localStorage.getItem('token');
                 console.log(token);
                 console.log("upto");
-                const response = await axios.get(`https://dobbyfrontend.azurewebsites.net/api/v1/employeeManager/employees/${id}`,{
+                const response = await axios.get(`https://dobbybackend.azurewebsites.net/api/v1/employeeManager/employees/${id}`,{
                     method:'GET',
                     headers:{
                         'Authorization':`Bearer ${token}`,
