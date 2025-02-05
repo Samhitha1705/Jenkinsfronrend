@@ -22,7 +22,7 @@ const EmployeesList = props => {
       setLoading(true);
 
       try {
-        const response = await fetch('https://talents-backend.azurewebsites.net/api/v1/employeeManager/employees', {
+        const response = await fetch('https://dobbybackend.azurewebsites.net/api/v1/employeeManager/employees', {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,
