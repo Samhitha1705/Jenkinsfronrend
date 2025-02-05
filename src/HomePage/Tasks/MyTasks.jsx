@@ -19,7 +19,7 @@ const MyTasks = props => {
     const fetchData = async () => {
 
       try {
-        const response = await axios.get(`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`);
+        const response = await axios.get(`https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`);
         setData(response.data);
         setLoading(false);
       } catch (error) {
@@ -57,13 +57,13 @@ const MyTasks = props => {
     let url;
 
     if (event.target.value === "allTasks") {
-      url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`;
+      url = `https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedTo/${employeeId}`;
     } else if (event.target.value === "overdueTasks") {
-      url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/OverdueTasks/PersonId/${employeeId}`;
+      url = `https://dobbybackend.azurewebsites.net/apis/employees/OverdueTasks/PersonId/${employeeId}`;
     } else if (event.target.value === "pendingTasks") {
-      url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/PendingTasks/PersonId/${employeeId}`;
+      url = `https://dobbybackend.azurewebsites.net/apis/employees/PendingTasks/PersonId/${employeeId}`;
     } else if (event.target.value === "completedTasks") {
-      url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/CompletedTasks/PersonId/${employeeId}`;
+      url = `https://dobbybackend.azurewebsites.net/apis/employees/CompletedTasks/PersonId/${employeeId}`;
     }
 
     try {
