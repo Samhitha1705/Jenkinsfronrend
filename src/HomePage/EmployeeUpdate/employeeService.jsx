@@ -1,6 +1,6 @@
 import axios from 'axios';
  
-const BASE_URL = 'https://talents-backend.azurewebsites.net/api/v1/employeeManager';
+const BASE_URL = 'https://dobbybackend.azurewebsites.net/api/v1/employeeManager';
  
 export const getEmployeeDetails = async (employeeId) => {
    
