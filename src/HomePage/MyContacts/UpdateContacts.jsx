@@ -33,7 +33,7 @@ const UpdateContacts = () => {
         const fetchData = async () => {
 
           try {
-            const response = await axios.get(`https://krupa-contacts.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`);
+            const response = await axios.get(`https://dobbybackend.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`);
             console.log(response.data);
             setFormData(response.data);
 
