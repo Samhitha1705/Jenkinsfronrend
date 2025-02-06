@@ -56,7 +56,7 @@ const UpdateContacts = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         setIsAdding(true);
-        await axios.put(`https://krupa-contacts.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`, formData);
+        await axios.put(`https://dobbybackend.azurewebsites.net/apis/employees/contacts/contacts/${contactId}`, formData);
         setIsAdding(false);
         navigate(`/ContactsDetails/${contactId}`)
     };
