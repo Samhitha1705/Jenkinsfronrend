@@ -33,16 +33,16 @@ const AssignedTasks = (props) => {
       let url;
 
       if (taskType === "allTasks") {
-        url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
+        url = `https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
       } else if (taskType === "overdueTasks") {
-        url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
+        url = `https://dobbybackend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
       }
       else if(taskType==="pendingTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/PendingTasks/AssignedFrom/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/PendingTasks/AssignedFrom/${employeeId}`;
         console.log(2);
       }
       else if(taskType==="completedTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/CompletedTasks/AssignedFrom/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/CompletedTasks/AssignedFrom/${employeeId}`;
         console.log(2);
       }
 
@@ -77,7 +77,7 @@ const AssignedTasks = (props) => {
   const confirmDelete = async () => {
     setLoading(true);
     const id = deleteId;
-    await axios.delete(`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasks/${id}`);
+    await axios.delete(`https://dobbybackend.azurewebsites.net/apis/employees/tasks/${id}`);
 
     // Refresh data after deletion
     const fetchData = async () => {
@@ -85,9 +85,9 @@ const AssignedTasks = (props) => {
       let url;
 
       if (taskType === "allTasks") {
-        url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
+        url = `https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
       } else if (taskType === "overdueTasks") {
-        url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
+        url = `https://dobbybackend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
       }
 
       try {
@@ -107,7 +107,7 @@ const AssignedTasks = (props) => {
     setLoading(true);
     if (!isOpen) {
       try {
-        const response = await axios.get(`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasks/${taskId}`);
+        const response = await axios.get(`https://dobbybackend.azurewebsites.net/apis/employees/tasks/${taskId}`);
         setTaskData(response.data);
         setLoading(false);
       } catch (error) {
@@ -121,9 +121,9 @@ const AssignedTasks = (props) => {
         let url;
 
         if (taskType === "allTasks") {
-          url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
+          url = `https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
         } else if (taskType === "overdueTasks") {
-          url = `https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
+          url = `https://dobbybackend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
         }
 
         try {
@@ -161,19 +161,19 @@ const AssignedTasks = (props) => {
 
         let url;
       if(event.target.value==="allTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/tasksAssignedBy/${employeeId}`;
         console.log(1);
       }
       else if(event.target.value==="overdueTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/OverdueTasks/AssignedFrom/${employeeId}`;
         console.log(2);
       }
       else if(event.target.value==="pendingTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/PendingTasks/AssignedFrom/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/PendingTasks/AssignedFrom/${employeeId}`;
         console.log(2);
       }
       else if(event.target.value==="completedTasks"){
-        url=`https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/CompletedTasks/AssignedFrom/${employeeId}`;
+        url=`https://dobbybackend.azurewebsites.net/apis/employees/CompletedTasks/AssignedFrom/${employeeId}`;
         console.log(2);
       }
       console.log(taskType);
