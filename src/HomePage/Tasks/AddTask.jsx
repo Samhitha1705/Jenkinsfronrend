@@ -31,7 +31,7 @@ export default function AddTask(props) {
     if (taskName !== "" && taskDetails !== "") {
       setIsLoading(true);
       try {
-        await axios.post("https://krupa-newtaskmodule-backend.azurewebsites.net/apis/employees/tasks", {
+        await axios.post("https://dobbybackend.azurewebsites.net/apis/employees/tasks", {
           taskAssignedById: localStorage.getItem("employeeId"),
           taskAssignedByName:localStorage.getItem('firstName')+" "+localStorage.getItem('lastName'),
           taskAssignedByEmail: localStorage.getItem('email'),
