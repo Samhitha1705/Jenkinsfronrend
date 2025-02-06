@@ -19,7 +19,7 @@ const Contacts=()=>{
 
             const employeeId=localStorage.getItem("employeeId");
           try {
-            const response = await axios.get(`https://krupa-contacts.azurewebsites.net/apis/employees/contacts/contactsBy/${employeeId}`);
+            const response = await axios.get(`https://dobbybackend.azurewebsites.net/apis/employees/contacts/contactsBy/${employeeId}`);
             console.log(response.data);
             setContacts(response.data);
             setLoading(false);
