@@ -32,10 +32,10 @@ const ManagerTimesheets = () => {
     if (!employeeId) return;
 
     try {
-      let url = `https://harhsa-backend.azurewebsites.net/api/timesheets/list/manager/${employeeId}`;
+      let url = `https://dobbybackend.azurewebsites.net/api/timesheets/list/manager/${employeeId}`;
         
       if (startDate && endDate) {
-        url = `https://harhsa-backend.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
+        url = `https://dobbybackend.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
       }
 
       const response = await axios.get(url);
@@ -76,7 +76,7 @@ const ManagerTimesheets = () => {
   const handleApprove = async (id) => {
     setLoading(true);
     try {
-      await axios.put(`https://harhsa-backend.azurewebsites.net/api/timesheets/Approve/${id}/status/APPROVED`);
+      await axios.put(`https://dobbybackend.azurewebsites.net/api/timesheets/Approve/${id}/status/APPROVED`);
       fetchSubmissions();
     } catch (error) {
       console.error("Error approving timesheet:", error);
@@ -88,7 +88,7 @@ const ManagerTimesheets = () => {
   const handleReject = async () => {
     setLoading(true);
     try {
-      await axios.put(`https://harhsa-backend.azurewebsites.net/api/timesheets/reject/${currentId}/status/REJECTED/comments/${comments}`);
+      await axios.put(`https://dobbybackend.azurewebsites.net/api/timesheets/reject/${currentId}/status/REJECTED/comments/${comments}`);
       fetchSubmissions();
       handleClose();
     } catch (error) {
