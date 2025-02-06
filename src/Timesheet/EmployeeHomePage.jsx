@@ -29,10 +29,10 @@ const EmployeeHomePage = ({ submissions, setSubmissions }) => {
 
     const fetchSubmissions = async () => {
       try {
-        let url = `https://harhsa-backend.azurewebsites.net/api/timesheets/list/${employeeId}`;
+        let url = `https://dobbybackend.azurewebsites.net/api/timesheets/list/${employeeId}`;
 
         if (startDate && endDate) {
-          url = `https://harhsa-backend.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
+          url = `https://dobbybackend.azurewebsites.net/api/timesheets/totalList/employeeId/${employeeId}/startDate/${startDate}/endDate/${endDate}`;
         }
 
         const response = await axios.get(url);
@@ -59,7 +59,7 @@ const EmployeeHomePage = ({ submissions, setSubmissions }) => {
 
   const handleDeleteTimesheet = async () => {
     try {
-      await axios.delete(`https://harhsa-backend.azurewebsites.net/api/timesheets/delete/${selectedSubmissionId}`);
+      await axios.delete(`https://dobbybackend.azurewebsites.net/api/timesheets/delete/${selectedSubmissionId}`);
       const updatedSubmissions = filteredSubmissions.filter(
         (sub) => sub.id !== selectedSubmissionId
       );
