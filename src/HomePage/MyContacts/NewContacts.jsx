@@ -40,7 +40,7 @@ const NewContacts = () => {
         if(formData.personName!=="" && formData.personMobile!==""){
             setIsError(false);
             setIsAdding(true);
-        await axios.post("https://krupa-contacts.azurewebsites.net/apis/employees/contacts/contacts", formData);
+        await axios.post("https://dobbybackend.azurewebsites.net/apis/employees/contacts/contacts", formData);
         setIsAdding(false);
         setShowPopup(true);
         }
